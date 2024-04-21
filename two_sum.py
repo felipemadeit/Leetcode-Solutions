@@ -1,29 +1,22 @@
-class solution(object):
+def two_sum(nums: list, target: int):
+    """Returns the index of the numbers whose sum is equal to the targt
+
+    Args:
+        nums (list): List of numbers
+        target (int): The target of the sum
+    """
+    index_target = []
     
-    
-    
-    def twoSum(self, nums, target):
-        seen = {}
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i]+nums[j] == target:
+                return [i, j]
+    return []
+            
+            
+            
+
+nums = [3, 2, 4]
+
+print(two_sum(nums, 6))
         
-        for index, numbers in enumerate(nums):
-            rest = target - numbers
-            
-            if rest in seen:
-                return [seen[rest], index]
-            
-            seen[numbers] = index
-                   	
-                
-            
-            
-            
-            
-            
-     
-nums = [2, 3, 4]       
-sol = solution()
-result = sol.twoSum(nums, 5)
-print(result)
-
-            
-
