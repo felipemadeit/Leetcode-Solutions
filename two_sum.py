@@ -14,9 +14,5 @@ def two_sum(nums: list, target: int):
     return []
             
             
-            
 
-nums = [3, 2, 4]
-
-print(two_sum(nums, 6))
         
